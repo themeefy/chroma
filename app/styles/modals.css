@@ -1,0 +1,41 @@
+.modal {
+	background-color: rgba(0, 0, 0, 0.46) !important;
+}
+
+.grade-holder {
+	/*margin-left: 74px;*/
+}
+
+.snapshot-modal .modal-body {
+	height: 500px;
+	overflow-y: auto;
+}
+
+.snapshot-modal h1.user {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.snapshot-modal .profilePhoto  img {
+	width: 100px !important;
+	height: 100px !important;
+	border-radius: 60%;
+}
+
+.snapshot-modal  .bio-holder {
+	margin-top: 12px !important;
+}
+
+.snapshot-modal .snapshot-play-icon {
+	position: absolute;
+  top: 26%;
+  left: 30%;
+}
+
+.snapshot-modal .snapshot-play-icon img {
+	width: 75px;
+}
+
+.portfolio-modal select.tag {
+	width: 50% !important;
+}

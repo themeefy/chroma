@@ -1,0 +1,33 @@
+.onboarding {
+	position: relative;
+	top: 50px;
+}
+
+.onboarding h1 {
+
+}
+
+.onboarding h2 {
+
+}
+
+.onboarding p {
+	font-size: 25px;
+}
+
+.onboarding button {
+	width: 100px;
+    border: none;
+    margin-top: 10px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.welcome {
+	font-size: 60px;
+}
+
+.welcome span {
+	font-size: 55px;
+	color: #CC0000;
+}

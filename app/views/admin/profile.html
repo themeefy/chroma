@@ -1,0 +1,231 @@
+<div ng-include="'views/admin/admin-header.html'"></div>
+<div ng-include="'../views/modals.html'"></div>
+<div class='home_page'>
+
+
+
+	<div class='home-holder-100' style='height: 100vh;'>
+		<!-- <div class='container'> -->
+
+		<div class='profile-det-holder'>
+			<div class='container'>
+				<div class='col-lg-2 col-md-2 col-sm-2 col-xs-12 padding-left-0'>
+					<div class='profile-image'>
+						<img ng-if='userDetails.photo !== undefined' ng-src='{{userDetails.photo}}'/>
+						<img ng-if='userDetails.photo == undefined' src='./images/default_avatar.png'/>
+					</div>
+				</div>
+				<div class='col-lg-7 col-md-7 col-sm-7 col-xs-12'>
+				</div>
+				<div class='col-lg-3 col-md-3 col-sm-3 col-xs-12'>
+				</div>
+			</div>
+		</div>
+		<div class='white-breadcrumb'>
+			<div class='container'>
+				<div class='col-lg-2 col-md-2 col-sm-2 col-xs-12'>
+				</div>
+				<div class='col-lg-7 col-md-7 col-sm-7 col-xs-12 padding-left-0'>
+					<h2>
+						{{userDetails.full_name}}
+					</h2>
+				</div>
+				<div class='col-lg-3 col-md-3 col-sm-3 col-xs-12 padding-right-0 text-align-right'>
+					<button class='snapshotBtn' ng-click='snapShot();'>
+						<img class='search-icon' src='./images/search.png'/>
+						<span class='text'>
+							Snapshot
+						</span>
+					</button>
+					<button class='followBtn' ng-if='profile_user.following !== true' ng-click='follow(userId);'>
+						<img class='star-icon' src='./images/star.png'/>
+						<span class='text'>
+							Follow
+						</span>
+					</button>
+					<button class='followBtn' ng-if='profile_user.following == true' ng-click='unFollow(userId);'>
+						<img class='star-icon' src='./images/star-yellow.png'/>
+						<span class='text'>
+							Unfollow
+						</span>
+					</button>
+				</div>
+
+				</div>
+			</div>
+
+		<div class='container' style='margin-top: 20px;'>
+		<div class='col-lg-2 col-md-2 col-sm-2 col-xs-12 height-100 padding-left-right-0'>
+
+				<!-- <div class='left-side-bar'>
+
+          <a href='javascript:void(0);' ng-click="cardsByGrade('8');">
+          <img src='./images/grade8.png'>
+          </a>
+          <a href='javascript:void(0);' ng-click="cardsByGrade('9');">
+          <img src='./images/grade9.png'>
+          </a>
+          <a href='javascript:void(0);' ng-click="cardsByGrade('10');">
+          <img src='./images/grade10.png'>
+          </a>
+          <a href='javascript:void(0);' ng-click="cardsByGrade('11');">
+          <img src='./images/grade11.png'>
+          </a>
+          <a href='javascript:void(0);' ng-click="cardsByGrade('12');">
+          <img src='./images/grade12.png'>
+          </a>
+
+				</div> -->
+				<div class='bio-holder'>
+			    <div class='bio-det'>
+			      <span class='bio-label'><b>Grade</b></span>: <input type='text' readonly class='bio-ans editable' ng-model='userDetails.grade' placeholder='Grade'/>
+			    </div>
+			    <div class='bio-det'>
+			      <span class='bio-label'><b>Location</b></span>: <div><input readonly class='bio-ans editable' ng-model='userDetails.cs' placeholder='Country,State'/></div>
+			    </div>
+			    <div class='bio-det'>
+			      <span class='bio-label'><b>GPA</b></span>: <input class='bio-ans editable' readonly ng-model='userDetails.gpa' placeholder='GPA'/>
+			    </div>
+			    <div class='bio-det'>
+			      <span class='bio-label'><b>SAT</b></span>: <input class='bio-ans editable' readonly ng-model='userDetails.sat' placeholder='SAT'/>
+			    </div>
+			    <div class='bio-det'>
+			      <span class='bio-label'><b>ACT</b></span>: <input class='bio-ans editable' readonly ng-model='userDetails.act' placeholder='ACT'/>
+			    </div>
+			    <div class='bio-det'>
+			      <span class='bio-label'><b>School</b></span>: <input class='bio-ans editable' readonly ng-model='userDetails.school' placeholder='School'/>
+			    </div>
+			    <div class='bio-det'>
+			      <span class='bio-label'><b>Interested Colleges</b></span>: <div><input class='bio-ans editable' readonly placeholder='Interested Colleges' ng-model='userDetails.interested_colleges'/></div>
+			    </div>
+			    <div class='bio-det'>
+			      <span class='bio-label'><b>Interested Fields</b></span>: <div><input class='bio-ans editable' readonly placeholder='Interested Fields' ng-model='userDetails.interested_field'/></div>
+			    </div>
+			  </div>
+
+		</div>
+
+		<div class='col-lg-7 col-md-7 col-sm-7 col-xs-12 padding-left-right-0 height-100'>
+
+
+
+    <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-left-right-0'>
+	  <div class='tag-filter'>
+
+      <select id='tag-dropdown'>
+        <option selected="selected">All Tags</option>
+				<option>Art</option>
+        <option>Athletics</option>
+        <option>Music & Theatre</option>
+        <option>School Club</option>
+        <option>Stem </option>
+        <option>Volunteer / Service</option>
+        <option>Work Experience</option>
+      </select>
+    </div>
+  </div>
+
+  <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-left-right-0'>
+    <div ng-repeat = 'ko in kos' class='ko-list-holder singleKo'>
+      <div class='row margin-left-right-0'>
+      <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+
+        <div class='grade-date-desc-holder'>
+          <div ng-if="ko.grade == 8">
+            <img src='./images/grade8.png'>
+          </div>
+          <div ng-if="ko.grade == 9">
+            <img src='./images/grade9.png'>
+          </div>
+          <div ng-if="ko.grade == 10">
+            <img src='./images/grade10.png'>
+          </div>
+          <div ng-if="ko.grade == 11">
+            <img src='./images/grade11.png'>
+          </div>
+          <div ng-if="ko.grade == 12">
+            <img src='./images/grade12.png'>
+          </div>
+          <div class='date-desc'>
+            <div class='tag-date'>
+              <b>{{ko.primarytag}} - {{ko.createdAt}}</b>
+            </div>
+            <div class='desc'>
+              {{ko.description | limitTo : 80}}...
+            </div>
+          </div>
+        </div>
+
+        <div class='ko-image'>
+        <img ng-src='{{ko.image}}' class='profile-img'/>
+        <div ng-if="ko.type == 'video'" class='play-icon'>
+          <img src='./images/play.png'>
+        </div>
+        </div>
+
+
+      </div>
+
+
+
+      <!-- <div class='col-lg-2'>
+
+        <img src='./images/dashboard/share.png' class='share'>
+        <span class='ko-username'>{{ko.user.username}} </span>
+
+      </div> -->
+
+      <!-- <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 text-align-center'>
+
+        <img src='./images/dashboard/trash.png' class='trash'>
+
+      </div> -->
+    </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+</div> <!-- End of second section -->
+
+<!-- Start of third section -->
+<div class='col-lg-3 col-md-3 col-sm-3 col-xs-12'>
+  <!-- <div class='bio-holder'>
+    <div class='bio-det'>
+      <span class='bio-label'><b>Grade</b></span>: <input type='text' readonly class='bio-ans editable' ng-model='userDetails.grade' placeholder='Grade'/>
+    </div>
+    <div class='bio-det'>
+      <span class='bio-label'><b>Location</b></span>: <div><input readonly class='bio-ans editable' ng-model='userDetails.cs' placeholder='Country,State'/></div>
+    </div>
+    <div class='bio-det'>
+      <span class='bio-label'><b>GPA</b></span>: <input class='bio-ans editable' readonly ng-model='userDetails.gpa' placeholder='GPA'/>
+    </div>
+    <div class='bio-det'>
+      <span class='bio-label'><b>SAT</b></span>: <input class='bio-ans editable' readonly ng-model='userDetails.sat' placeholder='SAT'/>
+    </div>
+    <div class='bio-det'>
+      <span class='bio-label'><b>ACT</b></span>: <input class='bio-ans editable' readonly ng-model='userDetails.act' placeholder='ACT'/>
+    </div>
+    <div class='bio-det'>
+      <span class='bio-label'><b>School</b></span>: <input class='bio-ans editable' readonly ng-model='userDetails.school' placeholder='School'/>
+    </div>
+    <div class='bio-det'>
+      <span class='bio-label'><b>Interested Colleges</b></span>: <div><input class='bio-ans editable' readonly placeholder='Interested Colleges' ng-model='userDetails.interested_colleges'/></div>
+    </div>
+    <div class='bio-det'>
+      <span class='bio-label'><b>Interested Fields</b></span>: <div><input class='bio-ans editable' readonly placeholder='Interested Fields' ng-model='userDetails.interested_field'/></div>
+    </div>
+  </div> -->
+</div>
+</div>
+
+	</div>
+
+
+
+
+</div>

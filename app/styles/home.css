@@ -1,0 +1,520 @@
+.ko-card {
+	width: 100%;
+	padding: 5px;
+	height: auto;
+	box-shadow: 0px 1px 2px;
+}
+
+.ko-card img {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.ko-card h3 {
+	word-wrap: break-word;
+}
+
+.ko-card p {
+	font-size: 15px;
+}
+
+.home_page {
+    position: relative;
+    /*padding-top: 90px;*/
+    min-height: 100%;
+    background-color: white;
+  }
+
+  .profile-pic-holder {
+    background-color: #CFD8DC;
+    width: 100%;
+    height: 200px;
+  }
+
+
+  .profile-pic-holder .plus-action {
+  	display: inline-block;
+  	vertical-align: top;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    font-size: 34px !important;
+    border-radius: 65%;
+    color: black;
+    background-color: white;
+    box-shadow: 0px 1px 2px gray;
+    margin-top: 140px;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .plus-action a {
+  	display: block;
+  }
+
+  .plus-action img {
+  	width: 100%;
+    vertical-align: top;
+  }
+
+  .profile-pic-holder .plus-action span {
+    position: relative;
+    top: -11px;
+  }
+
+  .profile-pic-holder a {
+    display: inline;
+    z-index: 1000;
+    position: relative;
+  }
+
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 70%;
+    margin-left: 80px;
+    margin-top: 80px;
+    background-color: white;
+    border : 5px solid rgba(211, 211, 211, 0.51);
+  }
+
+  .profile-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 70%;
+  }
+
+
+  .profile-details {
+    /*margin-top: -74px;*/
+    margin-left: 50px;
+  }
+
+  .home_page .details {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 40px;
+    min-height: 400px;
+    background-color: #ECEFF1;
+    box-shadow: 2px 0px 1px gray;
+  }
+
+  .profile-details h1 {
+    font-weight: 900;
+    color: #37474f;
+  }
+
+  .profile-details p {
+    font-size: 18px;
+    color: #607D8B;
+  }
+
+ .profile-desc {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 1px 2px 1px lightgray;
+  }
+
+  .profile-desc span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #607d8b;
+  }
+
+  .profile-desc p {
+    font-size: 14px;
+    color: #37474f;
+  }
+
+  .skill-set {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 1px 2px 1px lightgray;
+  }
+
+
+
+   /**********************************************************************************************
+
+    Add to portfolio modal list-style-position:
+
+    *********************************************************************************************/
+
+    .portfolio-modal {
+
+    }
+
+    .portfolio-modal input, .portfolio-modal textarea {
+      margin-top: 5px;
+    }
+
+
+    .portfolio-modal .top-spacing {
+      margin-top: 10px;
+    }
+
+    .portfolio-modal .image-preview {
+      min-height: 150px;
+      box-shadow: 0px 1px 2px 1px lightgray;
+      border-radius: 5px;
+    }
+
+    .portfolio-modal .image-preview img {
+      border-radius: 5px;
+      width: 100%;
+      height: 180px;
+    }
+
+    .portfolio-modal .left-spacing {
+      margin-left: 5px;
+    }
+
+
+
+
+/*******************************
+
+  New design
+
+
+*******************************/
+
+
+.home-holder-100 {
+  position: relative;
+  top: 62px;
+}
+
+
+.height-100 {
+  height: 100%;
+}
+
+.left-side-bar {
+  width:100%;
+  min-height:100%;
+  background-color: white;
+  /*position: absolute;*/
+}
+
+.left-side-bar img {
+	display: block;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.left-side-bar a {
+	display: block;
+}
+
+.left-side-bar a:not(:first-child) {
+	margin-top: 20px;
+}
+
+
+.home-holder-100 .tag-filter {
+	float: left;
+	width: 100%;
+}
+
+.home-holder-100 .tag-filter select {
+	width: 120px;
+  display: inline-block;
+  -webkit-appearance: menulist-button;
+  height: 27px;
+  background-color: white;
+}
+
+.home-holder-100 .analytics {
+  /*padding-left: 15px;*/
+  padding-top: 15px;
+}
+
+.analytics .analytics-tab {
+  padding-left: 30px;
+}
+
+.analytics .stats {
+  color: #6194ca !important;
+}
+
+.analytics .stats, .analytics .tab {
+  font-size: 12px;
+}
+
+
+.analytics .count {
+  padding-left: 25px;
+}
+
+.analytics .tab {
+  cursor: pointer;
+  color: #828999;
+  margin-left: 13px;
+  width: 100px;
+  height: 30px;
+  background-color: #e2e6ef;
+  text-align: center;
+  padding: 10px;
+  border-radius: 21px;
+}
+
+.analytics .graph {
+  margin-top: 40px;
+  background-color: #fcfcfc;
+}
+
+.graph img {
+  width: 100%;
+}
+
+
+.analytics-values {
+  padding-top: 20px;
+}
+
+.analytics-values ul li {
+  cursor: default !important;
+  list-style-type: none !important;
+}
+
+.analytics-values ul li:not(:first-child) {
+  padding-top: 80px;
+}
+
+.analytics-values li img {
+  height: auto;
+  width: auto;
+}
+
+
+.analytics-values span.value {
+  font-size: 34px;
+  color: #4a4d54;
+  position: relative;
+  top: 7px;
+}
+
+.analytics-values span.sub {
+  font-size: 14px;
+  color: #828999;
+}
+
+.tags-tab {
+  margin-top: 40px;
+}
+
+.tags-tab .tab {
+  cursor: pointer;
+  color: #030303;
+  margin-left: 8px;
+  width: 80px;
+  height: 30px;
+  background-color: #e2e6ef;
+  text-align: center;
+  padding: 10px;
+  border-radius: 21px;
+  font-size: 14px;
+}
+
+
+.all-kos {
+  margin-top: 40px;
+}
+
+.all-kos img.profile-img {
+  width: 30px;
+  height: 30px;
+}
+
+
+.singleKo {
+	width: 70%;
+box-shadow: 0px 0px 4px gray;
+height: auto;
+background-color: white;
+/*border-radius: 10px;*/
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-left: 0px !important;
+margin-right: 0px !important;
+}
+
+.singleKo:first-of-type {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.grade-date-desc-holder {
+	width: 100%;
+	float: left;
+}
+
+.grade-date-desc-holder img {
+	float: left;
+	width: 60px;
+}
+
+.play-icon {
+	position: absolute;
+  top: 40%;
+  left: 38%;
+}
+
+.date-desc {
+	/*display: inline-block;*/
+	font-size: 16px;
+	margin-left: 10px;
+	float: left;
+}
+
+.singleKo .profile-img {
+	/*float: left;*/
+	width: 100%;
+
+	/*overflow: hidden;*/
+
+	border-radius: 10px;
+}
+
+.ko-list-holder:first-of-type {
+	margin-top: 45px;
+}
+
+.singleKo .ko-image {
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-top: 15px;
+	height: 350px;
+	float: left;
+	width: 100%;
+}
+
+.left-side-bar, .bio-holder {
+	margin-top: 70px;
+}
+
+.bio-holder input {
+			/*float: left;*/
+			background-color: white;
+		    /*width: 100px;*/
+		    height: 30px;
+		    color: black;
+		    outline: none;
+				border-radius: 3px;
+		    /*border: none !important;*/
+		    box-shadow: none;
+	/*border-radius: 45px;*/
+	/*padding-left: 10px;*/
+	/*margin-left: 30px;*/
+}
+
+.autocomplete ul {
+	padding-left: 0px !important;
+
+}
+
+.autocomplete ul li {
+	list-style-type: none !important;
+	border: 1px solid #ccc;
+}
+
+
+.bio-label {
+	font-size: 16px;
+}
+
+.bio-ans {
+	font-size: 16px;
+}
+
+.bio-det:not(:first-child) {
+	margin-top: 15px;
+}
+
+.all-kos .ko-title {
+  padding-left: 8px;
+  font-size: 14px;
+  color: #4a4d54;
+}
+
+.all-kos .ko-date, .all-kos .ko-filesize, .all-kos .ko-username, .all-kos .ko-desc {
+  color: #a3abbe;
+  font-size: 14px;
+}
+
+.all-kos .share, .all-kos .trash {
+  cursor: pointer;
+  height: auto;
+  width: auto;
+}
+
+.octagon {
+	height: 80px;
+  overflow: hidden;
+  position: relative;
+ -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 80px;
+	display: block;
+}
+
+.octagon span {
+
+}
+
+.octagon:after {
+  background-color:#cecece;;
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+   -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+iframe video {
+	width: 100% !important;
+}
+
+.videogular-container {
+	width: 100%;
+	height: 320px;
+	margin: auto;
+	overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+	.videogular-container {
+		width: 1170px;
+		height: 658.125px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.videogular-container {
+		width: 940px;
+		height: 528.75px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.videogular-container {
+		width: 728px;
+		height: 409.5px;
+	}
+}

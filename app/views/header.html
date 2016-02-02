@@ -1,0 +1,80 @@
+<div class='header'>
+
+	<div class='container'>
+
+
+		<div class='float-left tohome' ng-show='loggedinheader'>
+				<a href='#/home'> <img src='./images/logo_black.png' class='logo-img'> </a>
+			</div>
+
+
+		<div class='float-left top-margin header-activities' ng-show='loggedinheader'>
+
+
+			<!-- <a href='#/logout'>Logout</a> -->
+
+			<a href='javascript:void(0);' ng-click='activateModal();'>
+				<img src='./images/upload.png'>
+				<span>Upload</span>
+			</a>
+			<!-- <a href='javascript:void(0);' ng-click=''>
+				<img src='./images/analytics.png'>
+				<span>Analytics</span>
+			</a> -->
+			<a href='#/timeline'>
+				<img src='./images/timeline.png'>
+				<span>Timeline</span>
+			</a>
+			<!-- <a href='javascript:void(0);'>
+				<img src='./images/messages.png'>
+				<span>Messages</span>
+			</a> -->
+			<!-- <a href='#/settings'>
+				<img src='./images/dashboard/settings.png'>
+			</a> -->
+
+
+
+
+
+
+		</div>
+
+		<div class='float-right top-margin header-activities' ng-show='loggedinheader'>
+			<!-- <a href='#/logout'>
+				Logout
+			</a> -->
+
+			<span class='username'>
+				{{user.username}}
+			</span>
+			<img ng-if='user.photo !== undefined' ng-src='{{user.photo}}' class='profile'>
+			<img ng-if='user.photo == undefined' src='./images/default_avatar.png' class='profile'>
+			<a href='#/logout'>Logout</a>
+		</div>
+
+		<div class='float-right top-margin' ng-hide='loggedinheader'>
+
+
+
+			<!-- <a href='#/signup'>Signup</a> -->
+			<a href='#/login'>Login</a>
+
+
+		</div>
+
+		<!-- <div class='float-right top-margin visible-lg visible-md hidden-sm hidden-xs' ng-hide='loggedinheader'>
+
+
+			<a href='#/auth'>Signup / Login</a>
+
+
+
+
+		</div> -->
+
+
+	</div>
+
+
+</div>

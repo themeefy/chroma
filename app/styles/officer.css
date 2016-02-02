@@ -1,0 +1,192 @@
+.table {
+  margin-left: 0px !important;
+}
+
+.filter-setting {
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.filter-setting input {
+  display: inline-block;
+  width: 100%;
+  margin-top: 5px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.filter-dropdown {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  min-height: 25px;
+}
+
+.caret-holder {
+  position: absolute;
+  border-left: 1px solid #ccc;
+  height: 100%;
+  top: 0;
+  width: 26px;
+  right: 0;
+  padding-top: 5px;
+}
+
+.officer-page .btn.btn-default.dropdown-toggle {
+  border: 1px solid;
+  border-color: #ccc !important;
+  height: 30px;
+  width: 120px;
+}
+
+.custom-filter {
+  width: 200px;
+}
+
+.sort-filter {
+  border: none !important;
+  width: 100px;
+}
+
+table {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+table.user-list thead td {
+  background-color: #666666 !important;
+  border: none !important;
+  text-align: center;
+}
+
+table.user-list thead td a {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+table.user-list tbody td {
+  border: none !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  text-align: center;
+  vertical-align: middle !important;
+}
+
+
+table.user-list tbody td img.star {
+  height: 20px;
+  width: 20px;
+}
+
+table.user-list tbody td img.user-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 57%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.grade-dashboard img {
+  width: 75px;
+}
+
+button.filter-reset {
+  outline: none !important;
+  border: none !important;
+  width: 85px;
+}
+
+button.filter-reset:nth-of-type(1) {
+  float: right;
+}
+
+
+button.save-filter {
+  width: 100% !important;
+  height: 30px;
+  border: none !important;
+  margin-top: 7px;
+  text-align: center;
+}
+
+.favorites {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  color: black;
+  text-align: center;
+}
+
+.total-favorites {
+  float: left;
+  display: inline-block;
+  width: 50%;
+}
+
+.favorites-week {
+  margin-left: 10%;
+}
+
+/* For profile page */
+
+.profile-det-holder {
+  width: 100%;
+  background-color: #666666;
+  height: 70px;
+  display: inline-block;
+}
+
+.white-breadcrumb {
+  box-shadow: 0px 1px 1px lightgray;
+  /*padding-top: 10px;*/
+  /*padding-bottom: 10px;*/
+  display: inline-block;
+  width: 100%;
+}
+
+.white-breadcrumb h2 {
+  margin: 0px;
+}
+
+.white-breadcrumb .snapshotBtn, .white-breadcrumb .followBtn {
+  border: 1px solid #ccc !important;
+  background-color: white !important;
+  border-radius: 5px !important;
+}
+
+.snapshotBtn img, .followBtn img {
+  width: 20px;
+  height: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  margin-top: 17px;
+  position: relative;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+select {
+  width: 100%;
+}
+
+.total-favorites .favorites {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  margin-top: 15px;
+  background-color: yellow;
+  padding-top: 16px;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+}

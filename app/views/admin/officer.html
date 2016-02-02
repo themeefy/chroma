@@ -1,0 +1,323 @@
+<div ng-include="'views/admin/admin-header.html'"></div>
+<div ng-include="'views/modals.html'"></div>
+<div class='home_page'>
+
+
+
+	<div class='home-holder-100 officer-page' style='height: 100vh;'>
+
+		<!--start of right side section -->
+
+		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-left-right-0 height-100'>
+
+
+			<div class='col-lg-2 col-md-2 col-sm-3 col-xs-12' style='margin-top: 0px;'>
+
+				<div class='total-favorites'>
+					<div class='favorites'>
+						<span>{{totalFavorites}}</span>
+					</div>
+					<div class='text-align-center'>
+						<b>Total Favorites</b>
+					</div>
+				</div>
+
+				<div class='total-favorites'>
+					<div class='favorites'>
+						<span>{{totalList}}</span>
+					</div>
+					<div class='text-align-center'>
+						<b>Total</b>
+					</div>
+				</div>
+
+				<div class='filter-setting'>
+					<div class='text-align-center'>
+						<b> Filter by Country</b>
+					</div>
+					<select class='school-select' id='country' ng-model="query.country" ng-trim='true'>
+							<option>
+								USA
+							</option>
+							<option>
+								International
+							</option>
+						</select>
+						<!-- <div id='states' class=''>
+							<input type='text' placeholder="State" ng-model='query.state'/>
+							<select ng-model='query.state'>
+								<option ng-repeat='state in states'>
+									{{state}}
+								</option>
+							</select>
+						</div> -->
+						<div id='states' class='state_filter'>
+						<input type='text' id='inputState' class='editable ' ng-model='query.state' style='margin-top: 5px;'/>
+						<div class="autocomplete  innerBox" ng-show="autocompleteHideState">
+							<ul>
+								<li ng-repeat="autoText in states | filter:query.state"  ng-click="setState(autoText)">{{autoText}}</li>
+							</ul>
+						</div>
+						</div>
+				</div>
+				<div class='filter-setting'>
+					<div class='text-align-center'>
+						<b>Filter by GPA</b>
+					</div>
+
+
+					<select class='school-select' ng-model="gpa_status" ng-trim='true' id='gpa'>
+							<option>
+								Above
+							</option>
+							<option>
+								Between
+							</option>
+						</select>
+
+				<select class='school-select' ng-model='query.gpa' ng-if='gpaAbove == true' ng-trim='true'>
+						<option ng-repeat='val in gpa'>
+							{{val}}
+						</option>
+					</select>
+
+					<div ng-if='gpaAbove == false'>
+							<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-left-0'>
+								<input type='text' ng-model='query.start_gpa'>
+							</div>
+							<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-right-0'>
+								<input type='text' ng-model='query.end_gpa'>
+							</div>
+						</div>
+				</div>
+
+					<div class='filter-setting'>
+						<div class='text-align-center'>
+							<b>Filter by ACT Value</b>
+						</div>
+						<select class='school-select' ng-model="gpa_status" ng-trim='true' id='act'>
+								<option>
+									Above
+								</option>
+								<option>
+									Between
+								</option>
+							</select>
+						<select class='act-select' ng-model="query.act" ng-if='actAbove == true' ng-trim='true'>
+									<option ng-repeat='at in actvalues'>
+										{{at}}
+									</option>
+							</select>
+							<div ng-if='actAbove == false'>
+								<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-left-0'>
+									<input type='text' ng-model='query.start_act'>
+								</div>
+								<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-right-0'>
+									<input type='text' ng-model='query.end_act'>
+								</div>
+							</div>
+
+						</div>
+						<div class='filter-setting'>
+							<div class='text-align-center'>
+								<b>Filter by SAT Value</b>
+							</div>
+							<select class='school-select' ng-model="gpa_status" ng-trim='true' id='sat'>
+									<option>
+										Above
+									</option>
+									<option>
+										Between
+									</option>
+								</select>
+							<select class='sat-select' ng-model="query.sat" ng-if='satAbove == true' ng-trim='true'>
+										<option ng-repeat='st in satvalues'>
+											{{st}}
+										</option>
+							</select>
+							<div ng-if='satAbove == false'>
+								<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-left-0'>
+									<input type='text' ng-model='query.start_sat'>
+								</div>
+								<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-right-0'>
+									<input type='text' ng-model='query.end_sat'>
+								</div>
+							</div>
+						</div>
+						<div class='filter-setting'>
+							<div class='text-align-center'>
+								<b>Filter by Interests</b>
+							</div>
+							<select class='fot-select' ng-model="query.interested_field" ng-trim='true' id='interest'>
+										<option ng-repeat='field in interests'>
+											{{field}}
+										</option>
+							</select>
+						</div>
+						<div class='filter-setting'>
+							<div class='text-align-center'>
+								<b>Filter by Colleges</b>
+							</div>
+							<!-- <select class='college-select' ng-model="query.interested_colleges" id='college'>
+										<option ng-repeat='colg in colleges'>
+											{{colg}}
+										</option>
+							</select> -->
+							<input type='text' id='inputCollege' class='editable' ng-model="query.interested_colleges"/>
+							<div class="autocomplete innerBox" ng-show="autocompleteHideCollege">
+								<ul id='collegeFilter'>
+									<li ng-repeat="autoText in colleges | filter:query.interested_colleges | limitTo:10" ng-click="setCollege(autoText)">{{autoText}}</li>
+								</ul>
+							</div>
+						</div>
+						<div class='filter-setting'>
+							<button ng-click="reset();" class='filter-reset'> Reset
+							<button ng-click="sort();" class='filter-reset'> Filter
+						</div>
+						<div class='filter-setting'>
+							<input type='text' ng-model='filtername'/>
+							<button ng-click="saveFilter()" class='save-filter'> Save Filter
+						</div>
+
+
+
+
+			</div>
+
+			<div class='col-lg-10 col-md-10 col-sm-9 col-xs-12' style='margin-top: 15px;'>
+			<div class='text-align-right'>
+				<select id='filters' class='custom-filter' ng-model='custom_filter'>
+					<option ng-repeat='filter in customFilters'>
+						{{filter}}
+					</option>
+				</select>
+				<button ng-click='sortByFilter();' class='sort-filter'>Filter
+			</div>
+      <table class="table table-bordered table-striped user-list">
+
+          <thead>
+            <tr>
+              <td colspan="3">
+                <a href="javascript:void(0);" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+                  Name
+                  <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+                  <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+                </a>
+              </td>
+
+              <td>
+                <a href="javascript:void(0);" ng-click="sortType = 'tastiness'; sortReverse = !sortReverse">
+                Grade
+                  <span ng-show="sortType == 'tastiness' && !sortReverse" class="fa fa-caret-down"></span>
+                  <span ng-show="sortType == 'tastiness' && sortReverse" class="fa fa-caret-up"></span>
+                </a>
+              </td>
+              <td>
+                <a href="javascript:void(0);" ng-click="sortType = 'tastiness'; sortReverse = !sortReverse">
+                GPA
+                  <span ng-show="sortType == 'tastiness' && !sortReverse" class="fa fa-caret-down"></span>
+                  <span ng-show="sortType == 'tastiness' && sortReverse" class="fa fa-caret-up"></span>
+                </a>
+              </td>
+              <td>
+                <a href="javascript:void(0);" ng-click="sortType = 'tastiness'; sortReverse = !sortReverse">
+                Act
+                  <span ng-show="sortType == 'tastiness' && !sortReverse" class="fa fa-caret-down"></span>
+                  <span ng-show="sortType == 'tastiness' && sortReverse" class="fa fa-caret-up"></span>
+                </a>
+              </td>
+              <td>
+                <a href="javascript:void(0);" ng-click="sortType = 'tastiness'; sortReverse = !sortReverse">
+                Sat
+                  <span ng-show="sortType == 'tastiness' && !sortReverse" class="fa fa-caret-down"></span>
+                  <span ng-show="sortType == 'tastiness' && sortReverse" class="fa fa-caret-up"></span>
+                </a>
+              </td>
+              <td>
+                <a href="javascript:void(0);" ng-click="sortType = 'tastiness'; sortReverse = !sortReverse">
+                College
+                  <span ng-show="sortType == 'tastiness' && !sortReverse" class="fa fa-caret-down"></span>
+                  <span ng-show="sortType == 'tastiness' && sortReverse" class="fa fa-caret-up"></span>
+                </a>
+              </td>
+
+							<td>
+                <a href="javascript:void(0);" ng-click="sortType = 'tastiness'; sortReverse = !sortReverse">
+                Last Activity
+                  <span ng-show="sortType == 'tastiness' && !sortReverse" class="fa fa-caret-down"></span>
+                  <span ng-show="sortType == 'tastiness' && sortReverse" class="fa fa-caret-up"></span>
+                </a>
+              </td>
+
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr ng-repeat="user in allUsers">
+            	<td ng-if="user.following === false"><img class='star' src='./images/star.png'  ng-click='follow(user.objectId);'/></td>
+							<td ng-if="user.following === true"><img class='star' src='./images/star-yellow.png'   ng-click='unFollow(user.objectId);'/></td>
+							<!-- <td>{{user.following}}</td> -->
+							<td style='width: 40px;'>
+
+								<img ng-if='user.photo == undefined' class='user-photo' src='./images/default_avatar.png'/>
+								<img ng-if='user.photo !== undefined' class='user-photo' ng-src='{{user.photo}}'>
+							</td>
+							<td style='width: 40px;'>
+								<a ng-if='user.full_name !== undefined' ng-href='#/profile/{{user.objectId}}' id='{{user.objectId}}'>{{user.full_name}}</a>
+								<a ng-if='user.full_name == undefined' ng-href='#/profile/{{user.objectId}}' id='{{user.objectId}}'>Not Set</a>
+							</td>
+
+              <td class='grade-dashboard'>
+								<div ng-if="user.grade == 8">
+			            <img src='./images/grade8.png'>
+			          </div>
+			          <div ng-if="user.grade == 9">
+			            <img src='./images/grade9.png'>
+			          </div>
+			          <div ng-if="user.grade == 10">
+			            <img src='./images/grade10.png'>
+			          </div>
+			          <div ng-if="user.grade == 11">
+			            <img src='./images/grade11.png'>
+			          </div>
+			          <div ng-if="user.grade == 12">
+			            <img src='./images/grade12.png'>
+			          </div>
+							</td>
+              <td ng-if='user.gpa !== undefined'>{{user.gpa}}</td>
+							<td ng-if='user.gpa == undefined'>Not Set</td>
+              <td ng-if='user.act !== undefined'>{{user.act}}</td>
+							<td ng-if='user.act == undefined'>Not Set</td>
+              <td ng-if='user.sat !== undefined'>{{user.sat}}</td>
+							<td ng-if='user.sat == undefined'>Not Set</td>
+              <td ng-if='user.interested_colleges !== undefined'>{{user.interested_colleges}}</td>
+							<td ng-if='user.interested_colleges == undefined'>Not Set</td>
+							<td>{{user.activity}}</td>
+
+            </tr>
+          </tbody>
+
+        </table>
+
+			</div>
+
+
+
+
+    </div>
+		<!-- End of right side section -->
+
+
+		</div>
+
+	</div>
+
+
+
+
+</div>
+
+<script>
+
+
+</script>

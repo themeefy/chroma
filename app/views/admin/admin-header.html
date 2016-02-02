@@ -1,0 +1,38 @@
+<div class='header'>
+
+	<div class='container'>
+
+		<div class='float-left tohome'>
+				<a href='#/admin'> <img src='./images/logo_black.png' class='admin-logo'> </a>
+			</div>
+
+
+		<div class='float-right top-margin header-activities'>
+
+
+			<!-- <a href='#/logout'>Logout</a> -->
+
+			<span>
+
+
+			<span class='username'>
+				{{user.username}}
+			</span>
+			<img ng-if='user.photo !== undefined' ng-src='{{user.photo}}' class='profile'>
+			<img ng-if='user.photo == undefined' src='./images/default_avatar.png' class='profile'>
+			<a href='#/logout'>
+				Logout
+			</a>
+
+
+
+
+		</div>
+
+
+
+
+	</div>
+
+
+</div>

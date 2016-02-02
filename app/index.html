@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css"> -->
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css' />
+    <link rel='stylesheet' href='bower_components/angular-material/angular-material.css' />
+    <link rel='stylesheet' href='bower_components/ng-table/dist/ng-table.min.css' />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/standard.css">
+    <link rel='stylesheet' href='styles/home.css'>
+    <link rel='stylesheet' href='styles/resume.css'>
+    <link rel='stylesheet' href='styles/footer.css'>
+    <link rel='stylesheet' href='styles/settings.css'>
+    <link rel='stylesheet' href='styles/header.css'>
+    <link rel='stylesheet' href='styles/login_signup.css'>
+    <link rel='stylesheet' href='styles/onboarding.css'>
+    <link rel='stylesheet' href='styles/modals.css'>
+    <link rel='stylesheet' href='styles/officer.css'>
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='bower_components/angular-bootstrap/ui-bootstrap-csp.css'>
+    <link href="http://vjs.zencdn.net/5.4.6/video-js.css" rel="stylesheet">
+
+    <!-- endbuild -->
+
+    <!-- <link rel='stylesheet' href='bower_components/angular-material/angular-material.min.css' type='text/css'> -->
+  </head>
+  <body ng-app="chromaApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#/">chroma</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#/">Home</a></li>
+              <li><a ng-href="#/signup">Signup</a></li>
+              <li><a ng-href="#/login">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+    <div ng-view=""></div>
+
+
+
+
+    <!-- <div ng-include="'views/footer.html'"></div> -->
+
+    <!-- <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      </div>
+    </div>
+ -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <!--  <script>
+    //    !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+    //    (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+    //    r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+    //    }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    //    ga('create', 'UA-XXXXX-X');
+    //    ga('send', 'pageview');
+    // </script> -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/parse/parse.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-modal-service/dst/angular-modal-service.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/ng-table/dist/ng-table.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <script src="http://vjs.zencdn.net/5.4.6/video.js"></script>
+    <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
+    <script type='text/javascript' src='scripts/external/angular-filepicker.js'></script>
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/controllers.js"></script>
+        <script src="scripts/services/services.js"></script>
+        <!-- endbuild -->
+
+        <script>
+          Parse.initialize("oBlzQ7nh8djtlJcxqBKHpCgJkSgami75nOArZ1H2", "DdjTqD962d3CO6GMnKkWf4OT62YgsYsfrRssKDtj");
+          // New parse account
+          // Parse.initialize("9Y7EC5OMZw1h5g6nly9dYCvqJguJkGZUjS38T08E", "c5T7yh8vpSnFXKX7Fi9ureZM5RAtXUYTK3aKR8er");
+        </script>
+</body>
+</html>
